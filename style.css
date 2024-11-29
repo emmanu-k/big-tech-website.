@@ -15,6 +15,55 @@ body {
     color: #fff; /* Changez la couleur du texte si nécessaire pour le contraste */
 }
 
+/* Pour les écrans de plus de 768px (tablettes et ordinateurs) */
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  nav ul {
+    text-align: left;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section {
+    width: 45%;
+  }
+}
+
+/* Pour les écrans de moins de 768px (smartphones et petites tablettes) */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+
 /* Navigation */
 nav {
     background-color: #fff; /* Couleur de fond pour le menu */
