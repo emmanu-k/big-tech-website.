@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG TECH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <img src="img/logo.JPG" alt="logo">
+        </div>
+        <div class="onglets">
+            <a href="/index.html">ACCUEIL</a>
+            <a href="#produits" onclick="showProducts(event)">NOS PRODUITS</a>
+            <a href="#POURQUOINOUS">POURQUOI NOUS </a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>BIG TECH</h1>
+        <h4>VOTRE PARTENAIRE SURE.</h4>
+        <p>Nous sommes une entreprise multisectorielle spécialisée dans les services informatiques, l'énergie et la climatisation, qui s'engage à offrir des solutions de qualité à ses clients...</p>
+    </header>
+
+    <div class="millieur" id="produits" style="display:none;">
+        <h1>NOS PRODUITS</h1>
+        <section class="main">
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>SERVICE INFORMATIQUE ET SECURITE</h1>
+                        <p>Nous vous aidons à la base de la base numérique de votre entreprise grâce à nos Services Informatiques d'experts. Nous proposons la vente des ordinateurs, des licences de logiciels et des solutions de cybersécurité de pointe.</p>
+                        <button onclick="showImages(0)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/inf 1.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-0" style="display:none;">
+                    <img src="img/vente logiciel 2.JPG" alt="image 2" class="rotating-image">
+                    <img src="img/vente cyber securite 3.JPG" alt="image 3" class="rotating-image">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>MAINTENANCE ET SOLUTIONS RESEAUX</h1>
+                        <p>Maintenir en toute transparence les réseaux essentiels pour des opérations ininterrompues.</p>
+                        <button onclick="showImages(1)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/maintenance reseau 5.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-1" style="display:none;">
+                    <img src="img/reseau et maintenance.JPG" alt="image 2" class="rotating-image">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>FOURNITURE DE PRODUITS ET SERVICE AGROALIMENTAIRE</h1>
+                        <p>Notre société est spécialisée dans la fourniture d'une large gamme de produits et services dans le secteur agroalimentaire.</p>
+                        <button onclick="showImages(2)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/agro 1.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-2" style="display:none;">
+                    <img src="img/agro 2.JPG" alt="image 2" class="rotating-image">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>BATIMENT TRAVAUX PUBLICS (BTP)</h1>
+                        <p>Fortement orientés vers la construction et le développement d'infrastructures.</p>
+                        <button onclick="showImages(3)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/btp 1.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-3" style="display:none;">
+                    <img src="img/bat 2.JPG" alt="image 2" class="rotating-image">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>TRANSPORTS ET LOGISTIQUES</h1>
+                        <p>Nous disposons d'une flotte de plus de 10 camions disponibles et variés.</p>
+                        <button onclick="showImages(4)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/voiture 1.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-4" style="display:none;">
+                    <img src="img/voiture 2.JPG" alt="image 2" class="rotating-image">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="left">
+                        <h1>Équipements et matériaux divers</h1>
+                        <p>Nous sommes fiers d'offrir une vaste gamme d'équipements et de matériaux divers.</p>
+                        <button onclick="showImages(5)">Découvrir</button>
+                    </div>
+                    <div class="right">
+                        <img src="img/equi 1.JPG" alt="image principale" class="main-img">
+                    </div>
+                </div>
+                <div class="images" id="images-5" style="display:none;">
+                    <img src="img/equi 2.JPG" alt="image 2" class="rotating-image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <h2 style="text-align: center;">Nos Références</h2>
+    <div class="references">
+        <img src="img/ref 1.JPG" alt="image 1" class="reference-img active">
+        <img src="img/ref 2.JPG" alt="image 2" class="reference-img">
+        <img src="img/ref 3.JPG" alt="image 3" class="reference-img">
+        <img src="img/ref 4.JPG" alt="image 4" class="reference-img">
+        <img src="img/ref 5.JPG" alt="image 5" class="reference-img">
+        <img src="img/ref 6.JPG" alt="image 6" class="reference-img">
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Contact</h2>
+                <p>Bingerville Blanchon, ilot 38B, lot: 405 B</p>
+                <p>Téléphone: 27 22 25 67 54 / 07 47 67 68 93</p>
+                <p>Email: infobigtech2022@gmail.com</p>
+            </div>
+            <div class="footer-center">
+                <h2>Nos services</h2>
+                <div class="services">
+                    <div class="service"><h3>Service Informatique et Sécurité</h3></div>
+                    <div class="service"><h3>Maintenance et Entretien</h3></div>
+                    <div class="service"><h3>Produits et Services Agroalimentaires</h3></div>
+                    <div class="service"><h4>Batiments et Travaux Publics (BTP)</h4></div>
+                    <div class="service"><h5>Transports et Logistiques</h5></div>
+                    <div class="service"><h6>Équipements et matériaux divers</h6></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h2>Pourquoi Nous</h2>
+                <p>Dans tous nos services, nous mettons l'accent sur l'importance de la satisfaction du client...</p>
+            </div>
+        </div>
+    </footer>    
+
+    <script src="script.js" defer></script>
+    <script>
+        function showProducts(event) {
+            event.preventDefault(); // Empêche le lien de défiler
+            const produitsSection = document.getElementById('produits');
+            produitsSection.style.display = 'block'; // Affiche la section des produits
+            produitsSection.scrollIntoView({ behavior: 'smooth' }); // Fait défiler la page vers la section
+        }
+    </script>
+</body>
+
+</html>
