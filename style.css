@@ -520,6 +520,33 @@ form button:hover {
     border-radius: 5px;
 }
 
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 10px; /* Plus de padding pour le footer sur mobile */
+  width: 100%;
+  position: relative; /* S'assurer qu'il ne dépasse pas */
+}
+
+footer p {
+  font-size: 14px; /* Ajuste la taille de la police sur les petits écrans */
+  margin: 0; /* Supprimer les marges pour éviter le chevauchement */
+  padding: 0;
+  line-height: 1.5; /* Améliore la lisibilité */
+}
+
+/* Pour les écrans de moins de 768px (smartphones) */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 5px; /* Réduire le padding pour éviter d'être trop grand */
+  }
+
+  footer p {
+    font-size: 12px; /* Réduire la taille de la police pour les petits écrans */
+  }
+}
+
 
 
 
