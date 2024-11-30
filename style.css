@@ -123,19 +123,28 @@ h2 {
         align-items: flex-start;
     }
 
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    nav .onglets {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .service-container {
-        grid-template-columns: 1fr;
-        padding: 5px;
+    .footer-left, .footer-right, .footer-center {
+        width: 100%; /* Les sections prennent toute la largeur */
+        text-align: center;
     }
 
-    .content {
-        flex-direction: column;
-        align-items: flex-start;
+    .service-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+        padding: 5px;
     }
 
     .references-container {
@@ -144,12 +153,8 @@ h2 {
     }
 
     .references-container img {
-        width: 100%; /* Assurez-vous que les images prennent toute la largeur sur petit écran */
+        width: 100%;
         height: auto;
-    }
-
-    .service-container {
-        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     }
 
     .service h3 {
@@ -172,6 +177,41 @@ h2 {
     form button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    /* Grille des images de référence */
+    .references-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Ajustement pour le formulaire */
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Images de référence */
+    .reference-img {
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Grille des produits et services */
+    .service-container {
+        grid-template-columns: 1fr;
     }
 }
 
