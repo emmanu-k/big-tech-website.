@@ -15,52 +15,72 @@ body {
     color: #fff; /* Changez la couleur du texte si nécessaire pour le contraste */
 }
 
-/* Pour les écrans de plus de 768px (tablettes et ordinateurs) */
-@media (min-width: 768px) {
-  header {
-    text-align: left;
-    padding-left: 20px;
-  }
-
-  nav ul {
-    text-align: left;
-  }
-
-  nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  main {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  section {
-    width: 45%;
-  }
+/* Style de base pour bureau (ordinateur de bureau, grands écrans) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
-/* Pour les écrans de moins de 768px (smartphones et petites tablettes) */
-@media (max-width: 768px) {
-  nav ul {
+nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+}
 
-  nav ul li {
-    margin-bottom: 10px;
-  }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
 
-  main {
-    padding: 10px;
-  }
+/* Media query pour les tablettes (écrans entre 600px et 900px) */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  section {
-    width: 100%;
-    margin-bottom: 15px;
-  }
+    nav a {
+        margin: 10px 0;
+    }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Media query pour les petits écrans (smartphones) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .scroll-container h1 {
+        font-size: 24px;
+    }
+
+    .service-container {
+        display: block;
+    }
+
+    .service {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
 }
 
 
