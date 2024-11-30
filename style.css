@@ -17,17 +17,12 @@ body {
     background-position: center;
     color: #fff;
     overflow-x: hidden; /* Empêche tout débordement horizontal */
-    font-size: 16px; /* Taille de police de base */
-}
-
-h1, h2, h3, p {
-    margin: 0;
 }
 
 /* Section de la grille des services */
 .service-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* S'adapte automatiquement */
+    grid-template-columns: repeat(2, 1fr); /* Deux produits par ligne */
     gap: 20px;
     max-width: 100%;
     margin: 20px auto;
@@ -39,7 +34,7 @@ h1, h2, h3, p {
 
 .service {
     background-color: hsl(120, 32%, 29%);
-    padding: 1.25rem; /* Utilise des unités relatives pour une meilleure flexibilité */
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,8 +47,7 @@ h1, h2, h3, p {
 
 .service img {
     width: 100%;
-    height: auto; /* Permet une flexibilité dans les images */
-    max-height: 200px; /* Définir une hauteur maximale pour garder l'aspect esthétique */
+    height: 200px;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -65,7 +59,7 @@ h1, h2, h3, p {
 }
 
 .service p {
-    font-size: 1rem;
+    font-size: 1em;
     color: #e0e0e0;
 }
 
@@ -86,18 +80,12 @@ h1, h2, h3, p {
 
 /* Pour les écrans plus petits (moins de 768px) */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Réduire la taille du texte sur des écrans plus petits */
-    }
     .service-container {
-        grid-template-columns: 1fr; /* Un seul service par ligne sur mobile */
+        grid-template-columns: repeat(2, 1fr); /* Toujours deux produits par ligne */
         gap: 15px;
     }
     .service img {
-        max-height: 180px; /* Ajuste la hauteur des images */
-    }
-    .service h3 {
-        font-size: 1.1em; /* Taille du texte réduite */
+        height: auto; /* Ajuste l'image en fonction de l'espace disponible */
     }
 }
 
@@ -105,15 +93,12 @@ h1, h2, h3, p {
 @media (max-width: 600px) {
     body {
         padding: 10px; /* Réduit la marge intérieure */
-        font-size: 13px; /* Taille du texte encore plus petite */
     }
     .service-container {
+        grid-template-columns: repeat(2, 1fr); /* Toujours deux produits par ligne */
         padding: 5px; /* Réduit le padding */
     }
     .service img {
-        max-height: 150px; /* Ajuste la hauteur des images pour les petits écrans */
-    }
-    .service h3 {
-        font-size: 1em; /* Taille du texte encore réduite */
+        height: 150px; /* Ajuste la hauteur des images pour les petits écrans */
     }
 }
