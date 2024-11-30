@@ -9,42 +9,107 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: hsla(100, 75%, 13%, 0.694); /* Fond d'écran */
-    background-size: cover;
-    background-position: center;
+    background-color: hsla(100, 75%, 13%, 0.694); /* Remplacez par le chemin de votre image de fond */
+    background-size: cover; /* Couvre tout l'arrière-plan */
+    background-position: center; /* Centre l'image */
+    color: #fff; /* Changez la couleur du texte si nécessaire pour le contraste */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+nav a {
     color: #fff;
-    line-height: 1.6;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Requête multimédia pour les tablettes (écrans entre 600px et 900px) */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .service-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Requête média pour les petits écrans (smartphones) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .scroll-container h1 {
+        font-size: 24px;
+    }
+    .service-container {
+        display: block;
+    }
+    .service {
+        margin-bottom: 20px;
+    }
+    footer {
+        text-align: center;
+    }
 }
 
 /* Navigation */
 nav {
-    background-color: #fff;
-    padding: 10px 20px;
+    background-color: #fff; /* Couleur de fond pour le menu */
+    padding: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-nav a {
-    color: #333;
+nav h1 {
+    font-size: 2rem;
+}
+
+nav #logo img {
+    height: 50px;
+}
+
+nav .onglets {
+    display: flex;
+    gap: 20px;
+}
+
+nav .onglets a {
+    color: hwb(53 12% 17%); /* Bleu pour les liens */
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
+    padding: 5px 10px;
+    transition: background 0.3s; /* Transition pour un effet au survol */
 }
 
-nav a:hover {
-    background: rgba(0, 123, 255, 0.2); /* Effet de survol */
+nav .onglets a:hover {
+    background: rgba(0, 123, 255, 0.2); /* Effet de survol bleu clair */
 }
 
 /* En-tête */
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centrer le contenu horizontalement */
     padding: 50px 0;
-    background-color: hsl(120, 51%, 18%);
+    background: hsl(120, 51%, 18%);
+    background-size: cover;
     color: #fff;
-    text-align: center;
 }
 
 .scroll-container {
@@ -52,10 +117,10 @@ header {
     overflow: hidden;
     white-space: nowrap;
     font-size: 24px;
-    color: hsl(40, 50%, 98%);
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
-    animation: scroll 10s linear infinite;
+    color: hsl(40, 50%, 98%);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .scroll-container h1, .scroll-container h4 {
@@ -63,14 +128,17 @@ header {
     animation: scroll 10s linear infinite;
 }
 
-/* Animation de défilement */
 @keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Paragraphe */
+header p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
 }
 
 /* Section des produits */
@@ -78,14 +146,51 @@ header {
     padding: 20px;
 }
 
+/* Pied de page */
+footer {
+    background-color: hsl(147, 76%, 13%);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left, .footer-right, .footer-center {
+    width: 30%;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Réactif */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Grille des services */
 .service-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin: 20px auto;
     max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #d2a83d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Style des services individuels */
 .service {
     background-color: hsl(120, 32%, 29%);
     padding: 20px;
@@ -132,7 +237,109 @@ header {
     background-color: #45a049;
 }
 
-/* Section Footer */
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+    .service h3 {
+        font-size: 1em;
+    }
+    .service img {
+        height: 150px;
+    }
+}
+
+/* Pour les petits écrans (moins de 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    form input[type="email"],
+    form textarea {
+        font-size: 14px;
+    }
+    form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    footer {
+        padding: 15px 5px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+
+.references-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.reference {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reference-img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 27px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.text-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #218838;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.text-content button:hover {
+    background-color: #0056b3;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -142,116 +349,18 @@ footer {
     position: relative;
 }
 
-/* Responsivité */
-@media (max-width: 1200px) {
-    .service-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
-    .scroll-container {
-        font-size: 20px;
-    }
-
-    .service-container {
-        grid-template-columns: 1fr 1fr;
-    }
+footer p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 16px;
-        margin: 10px 0;
-    }
-
-    header {
-        padding: 30px 0;
-    }
-
-    .scroll-container h1 {
-        font-size: 20px;
-    }
-
-    .service-container {
-        grid-template-columns: 1fr;
-        padding: 5px;
-    }
-
-    .service img {
-        height: 150px;
-    }
-
     footer {
         padding: 15px 5px;
     }
-
     footer p {
         font-size: 12px;
     }
 }
-
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .scroll-container {
-        font-size: 18px;
-    }
-
-    .service-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .service h3 {
-        font-size: 1em;
-    }
-
-    .service img {
-        height: 150px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .container h2 {
-        font-size: 20px;
-    }
-
-    form input[type="email"], form textarea {
-        font-size: 14px;
-    }
-
-    form button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-
-
-
-
-
