@@ -1,5 +1,5 @@
 /* Réinitialisation de styles de base */
-body, h1, h2, h3, h4,h5,h6, p {
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -123,28 +123,19 @@ h2 {
         align-items: flex-start;
     }
 
-    nav h1 {
-        font-size: 1.5rem;
-    }
-
-    nav .onglets {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .footer-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .footer-left, .footer-right, .footer-center {
-        width: 100%; /* Les sections prennent toute la largeur */
-        text-align: center;
+    .service-container {
+        grid-template-columns: 1fr;
+        padding: 5px;
     }
 
-    .service-container {
-        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
-        padding: 5px;
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .references-container {
@@ -153,8 +144,12 @@ h2 {
     }
 
     .references-container img {
-        width: 100%;
+        width: 100%; /* Assurez-vous que les images prennent toute la largeur sur petit écran */
         height: auto;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     }
 
     .service h3 {
@@ -178,61 +173,6 @@ h2 {
         font-size: 14px;
         padding: 8px 16px;
     }
-
-    header p {
-        font-size: 18px;
-    }
-
-    .main {
-        padding: 15px;
-    }
-
-    /* Grille des images de référence */
-    .references-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Ajustement pour le formulaire */
-    .container {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .container h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Images de référence */
-    .reference-img {
-        max-width: 100%;
-        aspect-ratio: 1 / 1;
-    }
-
-    /* Grille des produits et services */
-    .service-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Grille des services */
-.service-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #d2a83d;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Ajustements pour images dans .service-container */
-.service-container img {
-    width: 100%; /* L'image prendra toute la largeur disponible */
-    height: auto; /* Garde l'aspect ratio de l'image */
-    object-fit: cover; /* Couvre toute la surface du conteneur sans déformation */
 }
 
 /* Grille des images de référence */
@@ -249,26 +189,6 @@ h2 {
     width: 100%; /* Prend toute la largeur du conteneur */
     height: auto; /* Maintient le ratio d'aspect */
     object-fit: cover; /* Couvre l'espace sans déformation */
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-
-/* Grille des images de référence */
-.references-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-}
-
-.reference-img {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     border: 2px solid #ddd;
     border-radius: 5px;
 }
@@ -303,4 +223,18 @@ form textarea {
     font-size: 16px;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+}
+
+/* Ajustements pour les images des services */
+.service-container img {
+    width: 100%; /* L'image prend 100% de la largeur du conteneur */
+    height: auto; /* Garder l'aspect ratio */
+    object-fit: cover; /* S'assurer que l'image couvre tout l'espace sans déformation */
+}
+
+/* Ajustements pour les images dans la section pourquoi nous */
+.pknous img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: auto; /* Garder le ratio d'aspect */
+    object-fit: cover;
 }
