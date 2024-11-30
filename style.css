@@ -210,43 +210,7 @@ header p {
     box-sizing: border-box;
 }
 
-/* Style général du body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: hsla(100, 75%, 13%, 0.694); /* Couleur de fond que vous avez déjà */
-    color: #fff;
-}
-/* Style pour l'en-tête */
-header {
-    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
-    justify-content: space-between; /* Espacement entre le logo et le menu */
-    align-items: center; /* Aligner verticalement les éléments */
-    padding: 20px;
-    background-color: #fff; /* Fond blanc pour le menu */
-}
 
-/* Style pour le logo */
-.logo img {
-    height: 50px; /* Ajustez la taille du logo selon vos besoins */
-}
-
-/* Style pour la barre de navigation */
-.navbar ul {
-    list-style-type: none;
-    display: flex; /* Disposition en ligne */
-}
-
-.navbar li {
-    margin: 0 20px; /* Espacement entre les éléments du menu */
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #000; /* Couleur des liens */
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
 
 .navbar a:hover {
     color: #007BFF; /* Couleur au survol */
