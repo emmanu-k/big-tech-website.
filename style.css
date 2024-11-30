@@ -210,7 +210,12 @@ header p {
     box-sizing: border-box;
 }
 
-
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsla(100, 75%, 13%, 0.694); /* Couleur de fond que vous avez déjà */
+    color: #fff;
+}
 /* Style pour l'en-tête */
 header {
     display: flex; /* Utilisation de Flexbox pour aligner les éléments */
