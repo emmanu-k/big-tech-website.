@@ -210,12 +210,6 @@ header p {
     box-sizing: border-box;
 }
 
-/* Style général du body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: hsla(100, 75%, 13%, 0.694); /* Couleur de fond que vous avez déjà */
-    color: #fff;
-}
 
 /* Style pour l'en-tête */
 header {
@@ -253,21 +247,3 @@ header {
     color: #007BFF; /* Couleur au survol */
 }
 
-.reference-img {
-    width: 100%; /* L'image prend toute la largeur de sa colonne */
-    height: 250px; /* Hauteur uniforme pour chaque image */
-    object-fit: cover; /* Remplir sans déformation */
-    border-radius: 8px; /* Coins arrondis pour un aspect plus soigné */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour des images */
-}
-
-
-
-#produits {
-    text-align: center; /* Centre le texte horizontalement */
-    overflow: hidden; /* Cache le débordement pour l'effet de défilement */
-    white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
-}
-#produits a:hover {
-    background: rgba(0, 123, 255, 0.2); /* Effet de survol bleu clair */
-}
