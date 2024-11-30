@@ -1,18 +1,19 @@
 /* Réinitialisation de styles de base */
-body, h1, h2, h3, h4,h5,h6, p {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Styles globaux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: hsla(100, 75%, 13%, 0.694); /* Remplacez par le chemin de votre image de fond */
-    background-size: cover; /* Couvre tout l'arrière-plan */
-    background-position: center; /* Centre l'image */
-    color: #fff; /* Changez la couleur du texte si nécessaire pour le contraste */
+    padding: 0;
+    background-color: hsla(100, 75%, 13%, 0.694);
+    color: #fff;
 }
 
 /* Navigation */
@@ -24,73 +25,90 @@ nav {
     justify-content: space-between;
 }
 
-nav h1 {
-    font-size: 2rem; /* Taille de police ajustée */
-}
-
-nav #logo img {
+#logo img {
     height: 50px;
 }
 
-nav .onglets {
+.onglets {
     display: flex;
     gap: 20px;
 }
 
-nav .onglets a {
-    color: hwb(53 12% 17%); /* Bleu pour les liens */
+.onglets a {
+    color: #35a2ff;
     text-decoration: none;
-    padding: 5px 10px; /* Ajout d'un peu de padding */
-    transition: background 0.3s; /* Transition pour un effet au survol */
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-nav .onglets a:hover {
-    background: rgba(0, 123, 255, 0.2); /* Effet de survol bleu clair */
+.onglets a:hover {
+    background: rgba(0, 123, 255, 0.2);
+    color: #007BFF;
 }
 
 /* En-tête */
 header {
     display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre le contenu horizontalement */
-    padding: 50px 0; /* Espacement ajusté */
-    background: hsl(120, 51%, 18%) ;
-    background-size: cover; /* Couvre tout l'en-tête */
-    color: #fff;
+    flex-direction: row; /* Aligner logo et menu sur la même ligne */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: hsl(120, 51%, 18%);
 }
 
 .scroll-container {
-    display: flex; /* Affiche le contenu en ligne */
-    overflow: hidden; /* Masque le débordement */
-    white-space: nowrap; /* Évite le retour à la ligne */
-    font-size: 24px; /* Ajustez la taille de la police ici */
-    padding: 10px 0; /* Espace vertical pour un meilleur aspect */
-    color: hsl(40, 50%, 98%); /* Couleur du texte */
-    position: relative; /* Nécessaire pour l'animation */
-    background-color: rgba(0, 0, 0, 0.5); /* Optionnel : ajouter un fond pour le contraste */
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 24px;
+    padding: 10px 0;
+    color: hsl(40, 50%, 98%);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.scroll-container h1, .scroll-container h4 {
-    margin: 0 20px; /* Espace entre les éléments */
-    animation: scroll 10s linear infinite; /* Animation de défilement */
+.scroll-container h1 {
+    margin: 0 20px;
+    animation: scroll 10s linear infinite;
 }
 
-/* Animation de défilement */
 @keyframes scroll {
     0% {
-        transform: translateX(100%); /* Commence à droite */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%); /* Termine à gauche */
+        transform: translateX(-100%);
     }
 }
 
 /* Paragraphe */
 header p {
-    font-size: 20px; /* Ajustez la taille de la police ici */
-    margin-top: 10px; /* Espace entre le texte défilant et le paragraphe */
-    color: white; /* Couleur du texte pour le paragraphe */
-    text-align: center; /* Centre le texte du paragraphe */
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .onglets {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .onglets a {
+        padding: 8px;
+    }
+
+    .scroll-container {
+        font-size: 18px; /* Réduire la taille du texte défilant sur petits écrans */
+    }
 }
 
 /* Section des produits */
@@ -98,9 +116,16 @@ header p {
     padding: 20px;
 }
 
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
 /* Footer */
 footer {
-    background-color: hsl(147, 76%, 13%); /* Couleur de fond */
+    background-color: hsl(147, 76%, 13%);
     padding: 20px;
     color: #fff;
     display: flex;
@@ -121,98 +146,31 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-/* Styles de base */
-.main {
-    width: 100%;
-    position: relative;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 0;
-}
-
-
-
-.right p {
-    font-size: 1rem;
-    color: #333;
-}
-
-
-/* Titre du produit */
-.card h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Style pour les éléments à gauche */
-.left {
-    flex: 1;
-}
-
-.right {
-    flex: 1;
-}
-
-
-
 /* Section Pourquoi Nous */
 .pknous {
     padding: 20px;
-    background: #fff; /* Fond blanc pour l'uniformité */
+    background: #fff;
     text-align: center;
-    border-radius: 8px; /* Coins arrondis */
-}
-header p {
-    font-size: 24px; /* Ajustez la taille de la police ici */
-    margin-top: 10px; /* Espace entre le texte défilant et le paragraphe */
-    color: white; /* Couleur du texte pour le paragraphe */
-    text-align: center; /* Centre le texte du paragraphe */
+    border-radius: 8px;
 }
 
 /* Conteneur principal des images */
 .references {
-    display: flex; /* Utilise flexbox pour aligner les éléments sur une ligne */
-    justify-content: center; /* Centre les images */
-    padding: 20px; /* Espacement autour du conteneur */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Conteneur interne des images */
 .references-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes sur la même ligne */
-    gap: 20px; /* Espacement entre les images */
-    width: 100%; /* Assurez-vous que le conteneur utilise toute la largeur */
-    max-width: 1200px; /* Limite la largeur du conteneur */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-/* Style des images */
-
-/* Réinitialiser les marges et les paddings */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-.navbar a:hover {
-    color: #007BFF; /* Couleur au survol */
+.references img {
+    width: 100%;
+    height: auto;
 }
 
