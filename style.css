@@ -238,3 +238,235 @@ form textarea {
     height: auto; /* Garder le ratio d'aspect */
     object-fit: cover;
 }
+
+
+
+
+/* Réinitialisation de styles de base */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(100, 75%, 13%, 0.694);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur les petits écrans */
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 5vw; /* Taille du texte relative à la largeur de l'écran */
+    margin: 0;
+}
+
+nav #logo img {
+    height: 50px;
+}
+
+nav .onglets {
+    display: flex;
+    gap: 20px;
+}
+
+nav .onglets a {
+    color: hwb(53 12% 17%);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav .onglets a:hover {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+/* En-tête */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background: hsl(120, 51%, 18%);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+header p {
+    font-size: 2vw; /* Taille de texte relative à la largeur de l'écran */
+    margin-top: 10px;
+}
+
+/* Section des produits */
+.main {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: hsl(147, 76%, 13%);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Contenu du footer */
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adaptation aux petits écrans */
+}
+
+.footer-left, .footer-right, .footer-center {
+    width: 30%;
+}
+
+/* Section Pourquoi Nous */
+.pknous {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Grille des services */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid flexible */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #d2a83d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grille des images de référence */
+.references-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Images en grille adaptable */
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.reference-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Formulaire */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style des champs de saisie */
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styles Responsives */
+
+/* Mobile-first - Par défaut, on adapte tout pour les petits écrans */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form input[type="email"],
+    form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Adaptation à partir de 1024px - Tablette et plus grands écrans */
+@media (min-width: 1024px) {
+    .footer-content {
+        flex-direction: row; /* Les éléments du footer seront en ligne */
+    }
+
+    .service-container {
+        grid-template-columns: repeat(3, 1fr); /* Trois colonnes sur les grands écrans */
+    }
+
+    .service h3 {
+        font-size: 1.2em;
+    }
+
+    .service img {
+        height: 200px;
+    }
+}
+
+/* Réglages des images */
+img {
+    width: 100%; /* Les images s'adaptent à la largeur de leur conteneur */
+    height: auto;
+}
+
+.references-container img {
+    max-width: 100%;
+    height: auto;
+}
