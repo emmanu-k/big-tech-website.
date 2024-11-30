@@ -215,6 +215,45 @@ h2 {
     }
 }
 
+/* Grille des services */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #d2a83d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustements pour images dans .service-container */
+.service-container img {
+    width: 100%; /* L'image prendra toute la largeur disponible */
+    height: auto; /* Garde l'aspect ratio de l'image */
+    object-fit: cover; /* Couvre toute la surface du conteneur sans déformation */
+}
+
+/* Grille des images de référence */
+.references-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-adaptative grid */
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+/* Image dans la grille des références */
+.reference-img {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    object-fit: cover; /* Couvre l'espace sans déformation */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+
 /* Grille des images de référence */
 .references-container {
     display: grid;
