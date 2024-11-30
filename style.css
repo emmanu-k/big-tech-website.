@@ -364,3 +364,108 @@ footer p {
         font-size: 12px;
     }
 }
+
+
+/* Réinitialisation de styles de base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Assure que les bordures et les marges sont incluses dans la taille totale */
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(100, 75%, 13%, 0.694); /* Remplacez par le chemin de votre image de fond */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow-x: hidden; /* Empêche tout débordement horizontal */
+}
+
+/* Section de la grille des services */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* S'adapte automatiquement */
+    gap: 20px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #d2a83d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service {
+    background-color: hsl(120, 32%, 29%);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.service h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.service p {
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+.service a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service a:hover {
+    background-color: #45a049;
+}
+
+/* Pour les écrans plus petits (moins de 768px) */
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr; /* Un seul service par ligne sur mobile */
+        gap: 10px;
+    }
+    .service img {
+        height: auto; /* Ajuste l'image en fonction de l'espace disponible */
+    }
+}
+
+/* Pour les petits écrans (moins de 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Réduit la marge intérieure */
+    }
+    .service-container {
+        padding: 5px; /* Réduit le padding */
+    }
+    .service img {
+        height: 150px; /* Ajuste la hauteur des images pour les petits écrans */
+    }
+}
