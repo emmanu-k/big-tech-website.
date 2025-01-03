@@ -205,3 +205,103 @@ h2 {
     height: 100%; /* Assurez-vous que les images sont carrées */
     object-fit: cover; /* Cela permet aux images de remplir le carré */
 }
+
+/* Réinitialisation des styles par défaut */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  font-family: sans-serif; /* Ou une autre police de votre choix */
+  line-height: 1.6;
+  color: #333; /* Couleur de texte par défaut */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Élimine l'espace supplémentaire sous l'image */
+}
+
+.container {
+    width: 90%; /* On réduit légèrement la largeur par rapport à 100% */
+    max-width: 1200px; /* Largeur max pour grands écrans */
+    margin: 0 auto; /* Centre le conteneur */
+    padding: 0 15px;
+}
+
+
+/* Mise en page pour les écrans de taille moyenne et grande (desktop par exemple) */
+@media (min-width: 768px) {
+  /* Exemple pour diviser une section en 2 colonnes (vous pouvez l'adapter) */
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux colonnes de passer à la ligne en cas de manque de place */
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+   .col-6 {
+    flex-basis: calc(50% - 30px); /* Largeur de 50% avec les marges */
+     margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+  }
+
+  /* Vous pouvez ajuster les autres éléments en fonction de vos besoins */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  p { font-size: 1.1rem; }
+
+
+    /* Ajustez la taille des images ou du texte sur les plus grands écrans */
+    /* exemple */
+    img {
+        max-width: 70%;
+        height: auto;
+        display: block;
+    }
+
+}
+
+/* Mise en page pour les petits écrans (mobile) */
+@media (max-width: 767px) {
+
+    .row {
+        display: block;
+    }
+
+  /* Adapter la taille des textes aux écrans plus petits */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  p { font-size: 1rem; }
+
+   .col-6 {
+    flex-basis: 100%;
+    padding: 15px;
+
+  }
+   img {
+       max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* Autres ajustements pour petits écrans si besoin */
+}
+
+
+
+/* Si vos images sont trop grande au dela des ecrans, vous pouvez ajouter ceci  */
+@media (min-width: 1200px){
+    img {
+     max-width: 50%;
+        height: auto;
+        display: block;
+    }
+}
