@@ -91,10 +91,11 @@ header p {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
+        width: 90%;
     }
 
     .onglets {
@@ -107,7 +108,7 @@ header p {
     }
 
     .scroll-container {
-        font-size: 18px; /* Réduire la taille du texte défilant sur petits écrans */
+        font-size: 0.9px; /* Réduire la taille du texte défilant sur petits écrans */
     }
 }
 
