@@ -405,3 +405,131 @@ form button:hover {
     form textarea {
         font-size: 14px;
     }
+
+    form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+.references-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px; /* Espacement entre les images */
+    margin: 20px auto;
+    max-width: 1000px; /* Limite de largeur pour centrer */
+}
+
+.reference {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reference-img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Taille carrée */
+    aspect-ratio: 1 / 1; /* Assure un carré parfait */
+    object-fit: cover; /* Adapte l'image au carré */
+    border: 2px solid #ddd; /* Optionnel, pour le style */
+    border-radius: 5px; /* Coins légèrement arrondis */
+}
+
+
+
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 27px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.text-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #218838;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.text-content button:hover {
+    background-color: #0056b3;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* Style général pour le conteneur */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+/* Style pour le titre h1 */
+.scroll-container h1 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style pour h4 (facultatif, vous pouvez ajouter du contenu ou laisser vide) */
+.scroll-container h4 {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Media query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+    .scroll-container h1 {
+        font-size: 0.9rem; /* Réduction de la taille du texte sur les petits écrans */
+    }
+    
+    .scroll-container h4 {
+        font-size: 0.9rem; /* Ajustement de la taille du texte pour h4 */
+    }
+}
+
+/* Media query pour les écrans très petits (comme les smartphones en portrait) */
+@media screen and (max-width: 480px) {
+    .scroll-container h1 {
+        font-size: 0.9rem; /* Taille plus petite pour les très petits écrans */
+    }
+}
