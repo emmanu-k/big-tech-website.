@@ -328,7 +328,7 @@ footer {
     }
 
     .service h3 {
-        font-size: 1em; /* Réduire la taille des titres sur mobiles */
+        font-size: 0,9em; /* Réduire la taille des titres sur mobiles */
     }
 
     .service img {
