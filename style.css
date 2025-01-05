@@ -248,11 +248,11 @@ header p {
 .footer-center h5,
 .footer-center h6 {
     font-family:  Arial, sans-serif; /* Remplace 'NomDeTaPolice' par la police que tu souhaites utiliser */
-    font-size: 20px; /* Remplace 20px par la taille souhaitée */
+    font-size: 10px; /* Remplace 10px par la taille souhaitée */
     margin: 0; /* Optionnel : pour enlever l'espace par défaut */
 }
 footer {
-    margin-top: 20px; /* Ajuste la valeur selon l'espace désiré */
+    margin-top: 10px; /* Ajuste la valeur selon l'espace désiré */
 }
 
 
@@ -261,7 +261,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes de même taille */
     gap: 20px; /* Espace entre les éléments */
-    max-width: 1000px; /* Limite de la largeur pour centrer le contenu */
+    max-width: 1400px; /* Limite de la largeur pour centrer le contenu */
     margin: 20px auto; /* Centrer le conteneur avec une marge en haut et en bas */
     padding: 10px;
     background-color: #d2a83d;
@@ -342,7 +342,7 @@ footer {
 .container {
     max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -398,12 +398,13 @@ form button:hover {
 /* Responsivité pour les petits écrans */
 @media (max-width: 600px) {
     .container {
-        padding: 15px;
+        padding: 10px;
+        width: 90%;
     }
 
     form input[type="email"],
     form textarea {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     form button {
@@ -418,7 +419,7 @@ form button:hover {
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
     gap: 20px; /* Espacement entre les images */
     margin: 20px auto;
-    max-width: 1000px; /* Limite de largeur pour centrer */
+    max-width: 900px; /* Limite de largeur pour centrer */
 }
 
 .reference {
@@ -451,7 +452,7 @@ form button:hover {
 }
 
 .text-content p {
-    font-size: 27px;
+    font-size: 15px auto;
     line-height: 1.5;
     color: #fff;
 }
@@ -464,7 +465,7 @@ form button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16px auto;
 }
 
 .text-content button:hover {
@@ -479,7 +480,7 @@ form button:hover {
 }
 
 .image-content img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 5px;
 }
