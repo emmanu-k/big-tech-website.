@@ -25,6 +25,13 @@ nav {
     justify-content: space-between;
 }
 
+nav {
+    display: flex; /* Utilisation de flexbox */
+    flex-wrap: nowrap; /* Force les éléments sur une seule ligne */
+    justify-content: space-between; /* Distribue l'espace */
+}
+
+
 #logo img {
     height: 50px;
 }
@@ -101,12 +108,14 @@ header p {
     @media (max-width: 600px) {
     header, footer {
         font-size: 14px;
+        flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
     }
 }
 
 @media (min-width: 601px) {
     header, footer {
         font-size: 18px;
+        flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
     }
 }
 
@@ -158,12 +167,14 @@ h2 {
 @media (max-width: 600px) {
     header, footer {
         font-size: 14px;
+        flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
     }
 }
 
 @media (min-width: 601px) {
     header, footer {
         font-size: 18px;
+        flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
     }
 }
 
@@ -348,7 +359,7 @@ footer {
 
 @media (max-width: 768px) {
     .service-container {
-        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+        grid-template-columns:  fr; /* Une seule colonne sur les petits écrans */
         padding: 5px; /* Réduire l’espacement sur petits écrans */
     }
 
