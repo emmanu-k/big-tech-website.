@@ -75,6 +75,7 @@ header {
     display: flex;
     overflow: hidden;
     white-space: nowrap;
+    margin: 0 20px;
     font-size: 24px;
     padding: 10px 0;
     color: hsl(40, 50%, 98%);
@@ -84,6 +85,7 @@ header {
 
 .scroll-container h1 {
     margin: 0 20px;
+    padding: 10px;
     animation: scroll 8s linear infinite;
 }
 
@@ -98,8 +100,8 @@ header {
 
 /* Paragraphe */
 header p {
-    font-size: 10px; /* Ajustez la taille de la police ici */
-    margin-top: 10px; /* Espace entre le texte défilant et le paragraphe */
+    font-size: 10px auto; /* Ajustez la taille de la police ici */
+    margin-top: 20px; /* Espace entre le texte défilant et le paragraphe */
     color: white; /* Couleur du texte pour le paragraphe */
     text-align: center; /* Centre le texte du paragraphe */
 }
