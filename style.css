@@ -98,6 +98,19 @@ header p {
         width: 90%;
     }
 
+    @media (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) {
+    header, footer {
+        font-size: 18px;
+    }
+}
+
+
     .onglets {
         flex-direction: column;
         margin-top: 10px;
@@ -139,6 +152,18 @@ h2 {
     .content {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) {
+    header, footer {
+        font-size: 18px;
     }
 }
 
@@ -336,6 +361,19 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) {
+    header, footer {
+        font-size: 18px;
+    }
+}
+
+
 
 
 /* Style pour le conteneur du formulaire */
@@ -401,6 +439,19 @@ form button:hover {
         padding: 10px;
         width: 90%;
     }
+
+    @media (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) {
+    header, footer {
+        font-size: 18px;
+    }
+}
+
 
     form input[type="email"],
     form textarea {
@@ -487,50 +538,14 @@ form button:hover {
 
 
 
-
-
-
-
-/* Style général pour le conteneur */
-.scroll-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0;
-    height: 100vh;
-}
-
-/* Style pour le titre h1 */
-.scroll-container h1 {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Style pour h4 (facultatif, vous pouvez ajouter du contenu ou laisser vide) */
-.scroll-container h4 {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Media query pour les écrans plus petits */
-@media screen and (max-width: 768px) {
-    .scroll-container h1 {
-        font-size: 0.9rem; /* Réduction de la taille du texte sur les petits écrans */
-    }
-    
-    .scroll-container h4 {
-        font-size: 0.9rem; /* Ajustement de la taille du texte pour h4 */
+@media (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
     }
 }
 
-/* Media query pour les écrans très petits (comme les smartphones en portrait) */
-@media screen and (max-width: 480px) {
-    .scroll-container h1 {
-        font-size: 0.9rem; /* Taille plus petite pour les très petits écrans */
+@media (min-width: 601px) {
+    header, footer {
+        font-size: 18px;
     }
 }
