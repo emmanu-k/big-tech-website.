@@ -43,8 +43,17 @@ nav {
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
+    font-size: 2vw; /* Taille de police responsive */
     transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* Media queries pour ajuster la taille de la police sur écrans plus petits */
+@media (max-width: 600px) {
+    .onglets a {
+        font-size: 4vw; /* Ajustement pour petits écrans */
+    }
+}
+
 
 .onglets a:hover {
     background: rgba(0, 123, 255, 0.2);
