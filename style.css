@@ -23,13 +23,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap; /* Force les éléments sur une seule ligne */
+    display: flex; /* Utilisation de flexbox */
 }
 
-nav {
-    display: flex; /* Utilisation de flexbox */
-    flex-wrap: nowrap; /* Force les éléments sur une seule ligne */
-    justify-content: space-between; /* Distribue l'espace */
-}
 
 
 #logo img {
@@ -60,7 +57,7 @@ header {
     flex-direction: row; /* Aligner logo et menu sur la même ligne */
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     background-color: hsl(120, 51%, 18%);
 }
 
@@ -77,7 +74,7 @@ header {
 
 .scroll-container h1 {
     margin: 0 20px;
-    animation: scroll 10s linear infinite;
+    animation: scroll 8s linear infinite;
 }
 
 @keyframes scroll {
@@ -91,7 +88,7 @@ header {
 
 /* Paragraphe */
 header p {
-    font-size: 20px; /* Ajustez la taille de la police ici */
+    font-size: 10px; /* Ajustez la taille de la police ici */
     margin-top: 10px; /* Espace entre le texte défilant et le paragraphe */
     color: white; /* Couleur du texte pour le paragraphe */
     text-align: center; /* Centre le texte du paragraphe */
@@ -109,6 +106,7 @@ header p {
     header, footer {
         font-size: 14px;
         flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
+        width: 90%;
     }
 }
 
@@ -116,6 +114,7 @@ header p {
     header, footer {
         font-size: 18px;
         flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
+        width: 90%;
     }
 }
 
@@ -161,6 +160,7 @@ h2 {
     .content {
         flex-direction: column;
         align-items: flex-start;
+        width: 90%;
     }
 }
 
@@ -168,6 +168,7 @@ h2 {
     header, footer {
         font-size: 14px;
         flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
+        width: 90%;
     }
 }
 
@@ -175,6 +176,7 @@ h2 {
     header, footer {
         font-size: 18px;
         flex-direction: column; /* Aligner les éléments verticalement sur petits écrans */
+        width: 90%;
     }
 }
 
@@ -359,8 +361,9 @@ footer {
 
 @media (max-width: 768px) {
     .service-container {
-        grid-template-columns:  fr; /* Une seule colonne sur les petits écrans */
+        grid-template-columns:  1fr; /* Une seule colonne sur les petits écrans */
         padding: 5px; /* Réduire l’espacement sur petits écrans */
+        width: 90%;
     }
 
     .service h3 {
@@ -375,12 +378,14 @@ footer {
 @media (max-width: 600px) {
     header, footer {
         font-size: 14px;
+        width: 90%;
     }
 }
 
 @media (min-width: 601px) {
     header, footer {
         font-size: 18px;
+        width: 90%;
     }
 }
 
@@ -454,12 +459,14 @@ form button:hover {
     @media (max-width: 600px) {
     header, footer {
         font-size: 14px;
+        width: 90%;
     }
 }
 
 @media (min-width: 601px) {
     header, footer {
         font-size: 18px;
+        width: 90%;
     }
 }
 
