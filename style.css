@@ -491,6 +491,21 @@ form button:hover {
     max-width: 900px; /* Limite de largeur pour centrer */
 }
 
+.scroll-container h2 {
+    margin: 0 20px;
+    animation: scroll 8s linear infinite;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .reference {
     display: flex;
     justify-content: center;
@@ -553,6 +568,7 @@ form button:hover {
     height: auto;
     border-radius: 5px;
 }
+
 
 
 
