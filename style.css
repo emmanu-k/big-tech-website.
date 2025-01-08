@@ -623,3 +623,81 @@ form button:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Couleur au survol */
 }
+
+
+
+/* styles.css */
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Couleur de fond neutre */
+}
+
+header {
+    background-color: #007BFF; /* Couleur de fond du header */
+    color: white;
+    padding: 20px;
+}
+
+.header-container {
+    text-align: center;
+}
+
+.scroll-container h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.acceuil-container {
+    max-width: 800px; /* Largeur maximale de la section */
+    margin: 20px auto; /* Centrer la section */
+    padding: 20px;
+    background-color: white; /* Couleur de fond de la section */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.acceuil-container h5 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.acceuil-container p {
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .scroll-container h1 {
+        font-size: 2em; /* Réduction de la taille de police pour les petits écrans */
+    }
+
+    .acceuil-container {
+        padding: 15px; /* Réduction du padding sur les petits écrans */
+    }
+
+    .acceuil-container h5 {
+        font-size: 1.2em; /* Réduction de la taille de police pour h5 */
+    }
+
+    .acceuil-container p {
+        font-size: 1em; /* Ajustement de la taille de police pour le texte */
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-container h1 {
+        font-size: 1.5em; /* Taille de police plus petite pour les très petits écrans */
+    }
+
+    .acceuil-container h5 {
+        font-size: 1em; /* Taille de police ajustée pour h5 */
+    }
+
+    .acceuil-container p {
+        font-size: 0.9em; /* Ajustement de la taille de police pour le texte */
+    }
+}
