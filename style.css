@@ -25,6 +25,8 @@ nav {
     justify-content: space-between;
     flex-wrap: nowrap; /* Force les éléments sur une seule ligne */
     display: flex; /* Utilisation de flexbox */
+    overflow: hidden; /* Cache le débordement pour l'effet de défilement */
+    white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
 }
 
 
