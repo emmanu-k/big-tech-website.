@@ -647,10 +647,10 @@ header {
 }
 
 .acceuil-container {
-    max-width: 800px; /* Largeur maximale de la section */
+    max-width: 900px; /* Largeur maximale de la section */
     margin: 20px auto; /* Centrer la section */
     padding: 20px;
-    background-color: white; /* Couleur de fond de la section */
+    background-color: hsl(120, 51%, 18%); /* Couleur de fond de la section */
     border-radius: 5px; /* Coins arrondis */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
