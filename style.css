@@ -411,7 +411,40 @@ footer {
 }
 
 
+/* Formulaire de contact en colonne */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
 
+#contactForm label {
+    margin-bottom: 5px;
+}
+
+#contactForm input, #contactForm textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    padding: 10px;
+    background-color: #FFA500; /* Orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #FF8C00; /* Orange plus foncé */
+}
+
+/* Centrer les informations de contact */
+.center {
+    text-align: center;
+}
 
 /* Style pour le conteneur du formulaire */
 .container {
